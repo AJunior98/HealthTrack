@@ -1,0 +1,47 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #f5f5f5;
+    background-image: url(../imagens/bg-login.jpg);
+    background-repeat: no-repeat;
+    background-position: 30% 72%;
+}
+
+.container-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin: 0px;
+}
+
+.quadro-login {
+    background-color: #ffffff;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 7px;
+    border-color: #d0d0d0;
+}
+
+.botao-entrar, .botao-entrar:hover, .botao-entrar:active {
+    background-color: #FF7700;
+    border-color: #b35400;
+    color: white;
+}
+
+a:hover {
+    color: #FF7700;
+}
+
+.container-rodape {
+    display: flex;
+    justify-content: center;
+    font-style: italic;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #FF7700;
+}

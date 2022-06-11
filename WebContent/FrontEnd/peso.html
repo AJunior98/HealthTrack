@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/peso.css">
+
+    <title>Peso // Health Track</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light navbar-custom fixed-top">
+            <div class="container-fluid col-lg-6">
+
+                <!-- BOTÃO VOLTAR -->
+                <div class="botao-voltar">
+                    <a href="./dashboard.html">
+                        <span class="material-icons">arrow_back_ios_new</span>
+                    </a>
+                </div>
+                <!-- BOTÃO VOLTAR -->
+
+                <!-- TÍTULO DA PÁGINA -->
+                <h1 class="titulo-navbar">Histórico de pesos</h1>
+                <!-- TÍTULO DA PÁGINA -->
+
+                <!-- INÍCIO MENU SANDUÍCHE -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- FIM MENU SANDUÍCHE -->
+
+                <!-- INÍCIO DA LISTA DO MENU -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link" href="./dashboard.html">Início<span class="material-icons">space_dashboard</span></a>
+                        </li>
+
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link active" aria-current="page" href="./peso.html">Peso<span class="material-icons">monitor_weight</span></a>
+                        </li>
+
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link" href="./exercicios.html">Exercícios<span class="material-icons">fitness_center</span></a>
+                        </li>
+
+                        <li class="nav-item ms-auto">
+                                <a class="nav-link" href="#">Alimentação<span class="material-icons">restaurant</span></a>
+                        </li>
+
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link" href="#">Configurações<span class="material-icons">settings</span></a>
+                        </li>
+
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link" href="#">Meu Perfil<span class="material-icons">account_circle</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- FIM DA LISTA DO MENU -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container principal col-lg-6">
+            <!-- SELEÇÃO DE MÊS -->
+            <div class="container selecao-mes">
+                <a href="#" class="seta"><span class="material-icons">arrow_back_ios</span></a>
+                <h2 class="mes">Últimos 6 meses</h2>
+                <a href="#" class="seta"><span class="material-icons">arrow_forward_ios</span></a>
+            </div>
+            <!-- SELEÇÃO DE MÊS -->
+
+            <!-- ORDENAR POR -->
+            <div class="container ordernar col-lg-12">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Ordenar por
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Data (decrescente)</a></li>
+                        <li><a class="dropdown-item" href="#">Peso (decrescente)</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Data (crescente)</a></li>
+                        <li><a class="dropdown-item" href="#">Peso (crescente)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- ORDENAR POR -->
+
+            <!-- LISTAGEM DE PESOS -->
+            <div class="container listagem col-lg-12">
+                <!-- REGISTRO 1 -->
+                <a href="./editar-peso.html">
+                    <div class="container registro col-lg-12">
+                        <div class="row">
+                            <div class="col-6" id="data">
+                                05/02/2022
+                            </div>
+                            <div class="col-6" id="peso">
+                                74,3 KG
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- REGISTRO 2 -->
+                <a href="#">
+                    <div class="container registro col-lg-12">
+                        <div class="row">
+                            <div class="col-6" id="data">
+                                07/01/2022
+                            </div>
+                            <div class="col-6" id="peso">
+                                76,1 KG
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- REGISTRO 3 -->
+                <a href="#">
+                    <div class="container registro col-lg-12">
+                        <div class="row">
+                            <div class="col-6" id="data">
+                                22/12/2021
+                            </div>
+                            <div class="col-6" id="peso">
+                                77,2 KG
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- REGISTRO 4 -->
+                <a href="#">
+                    <div class="container registro col-lg-12">
+                        <div class="row">
+                            <div class="col-6" id="data">
+                                15/11/2021
+                            </div>
+                            <div class="col-6" id="peso">
+                                78,1 KG
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- REGISTRO 5 -->
+                <a href="#">
+                    <div class="container registro col-lg-12">
+                        <div class="row">
+                            <div class="col-6" id="data">
+                                09/10/2021
+                            </div>
+                            <div class="col-6" id="peso">
+                                78,9 KG
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- REGISTRO 6 -->
+                <a href="#">
+                    <div class="container registro col-lg-12">
+                        <div class="row">
+                            <div class="col-6" id="data">
+                                05/09/2021
+                            </div>
+                            <div class="col-6" id="peso">
+                                77,5 KG
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- LISTAGEM DE PESOS -->
+
+            <!-- BOTÃO ADICIONAR -->
+            <div class="container botao-adicionar fixed-bottom">
+                <a href="./adicionar-peso.html">
+                    <button type="button" class="btn btn-dark">+</button>
+                </a>
+            </div>
+            <!-- BOTÃO ADICIONAR -->
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

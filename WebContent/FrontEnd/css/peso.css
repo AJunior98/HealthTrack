@@ -1,0 +1,120 @@
+/* SELEÇÃO MÊS DE VISUALIZAÇÃO */
+.selecao-mes {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selecao-mes .material-icons {
+    font-size: 18px;
+}
+
+.selecao-mes .seta {
+    text-decoration: none;
+    color: var(--bs-body-color);
+}
+
+.selecao-mes .material-icons:hover {
+    text-decoration: none;
+    color: #FF7700;
+}
+
+.selecao-mes .mes {
+    margin: 0;
+    padding: 0 25px;
+    font-size: calc(1vh + 65%);
+    font-weight: 300;
+    text-transform: lowercase;
+}
+/* SELEÇÃO MÊS DE VISUALIZAÇÃO */
+
+
+/* BOTÃO ORDENAR POR */
+.dropdown {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dropdown button {
+    background-color: white;
+    color: #48484886;
+    border: none;
+}
+
+.dropdown button:hover, .dropdown button:focus {
+    background-color: white;
+    color: #FF7700;
+}
+/* BOTÃO ORDENAR POR */
+
+
+/* LISTAGEM DE PESOS */
+/* .listagem .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+} */
+
+.listagem a {
+    text-decoration: none;
+    color: var(--bs-body-color);
+}
+
+.listagem a:hover, .listagem a:focus{
+    color: #FF7700;
+}
+
+.registro {
+    padding: 20px 10px;
+    border-bottom: 1px solid #484f5f45;
+}
+
+#data {
+    font-size: 1.25em;
+    display: flex;
+    justify-content: center;
+}
+
+#peso {
+    font-weight: 700;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+/* LISTAGEM DE PESOS */
+
+
+/* BOTÃO ADICIONAR */
+.botao-adicionar {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin-right: 25px;
+}
+
+.botao-adicionar a {
+    text-decoration: none;
+}
+
+.botao-adicionar button {
+    width: 75px;
+    height: 75px;
+    border-color: #484848;
+    border-radius: 50px;
+    border-width: 1px;
+    background-color: #FF7700;
+    color: white;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.botao-adicionar button:hover {
+    background-color: #FF7700;
+    border-color: #484848;
+    color: white;
+}
+/* BOTÃO ADICIONAR */

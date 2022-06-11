@@ -1,0 +1,66 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+main {
+    padding-top: calc(65px + 20px); /* 65px da navbar + 20px de distância entre a navbar e o começo da <main> */
+}
+
+/* NAVBAR */
+.navbar-custom {
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #484f5f31;
+}
+
+.navbar-light .navbar-toggler {
+    margin: 4px 0;
+    border: none;
+}
+
+.botao-voltar a {
+    text-decoration: none;
+    color: #383736;
+}
+
+.titulo-navbar {
+    margin: 0;
+    color: #383736;
+    text-transform: uppercase;
+    font-size: calc(1vw + 75%);
+    font-weight: 700;
+    
+    /* Posiciona o elemento no centro da viewport */
+    position: absolute;
+    top: 33px;
+    left: 49.7%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.navbar ul {
+    margin-top: 16px;
+}
+
+.nav-item {
+    padding-left: 2px;
+}
+
+.nav-link, .material-icons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item .material-icons {
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .material-icons:hover, .navbar-light .navbar-nav .nav-link:hover {
+    color: #484848;
+}
+
+/* LINK REFERENTE À PÁGINA ABERTA NO MOMENTO (EM NEGRITO NO MENU) */
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(0, 0, 0, .55);
+    font-weight: 700;
+}
+/* NAVBAR */

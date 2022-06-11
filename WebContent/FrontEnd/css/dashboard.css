@@ -1,0 +1,84 @@
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-cards {
+    border: 1px solid #dfdfdf;
+    border-radius: 0.25rem;
+    padding: 6px 12px;
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 0;
+    margin: 12px 0;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    color: #ff7700;
+}
+
+.card-title h2 {
+    margin: 0 0 0 7px;
+    font-weight: bold;
+}
+
+.card-text {
+    margin: 16px 0 0 0;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    height: 25px;
+    border-radius: 20px;
+}
+
+.progress-bar {
+    background-color: #ff7700;
+    font-size: 0.85rem;
+}
+
+.container-grafico {
+    border: 1px solid #dfdfdf;
+    border-radius: 0.25rem;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.container-grafico h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container-grafico .container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.container-grafico .container img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-dica {
+    border: 1px solid #dfdfdf;
+    border-radius: 0.25rem;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.container-dica h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.container-dica p {
+    margin: 0;
+}
