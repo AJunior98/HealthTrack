@@ -37,11 +37,11 @@
                         Acesse sua conta
                     </h1>
                     
-                    <form>
+                    <form method="post" action="login">
                         <!-- CAMPO E-MAIL -->
                         <div class="container mb-4 col-10">
                             <label for="email" class="mb-2">E-mail:</label>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" name= "email" class="form-control" id="email">
                         </div>
                         
                         <!-- CAMPO SENHA -->
@@ -54,7 +54,7 @@
                                     </a>    
                                 </div>    
                             </div>
-                            <input type="password" class="form-control" id="pwd">
+                            <input type="password" name="password" class="form-control" id="pwd">
                         </div>
                         
                         <!-- CAMPO MANTENHA-ME CONECTADO -->
@@ -65,7 +65,10 @@
                         <!-- BOTÃO ENTRAR -->
                         <div class="container col-10">
                             <div class="d-grid gap-2 col-12 mx-auto px-0">
-                                <a href="./dashboard.html" class="btn botao-entrar">Entrar</a>
+                            <!-- AQUI VAMOS COLOCAR O VALIDADOR DE USUÁRIO -->
+                            	<input type='submit' name='Entrar' id='login'
+                            		class = 'form-login' value="Entrar" />
+                            <!--<a href="HealthTrack/login" class="btn botao-entrar">Entrar</a>-->
                             </div>    
                         </div>
                     </form>

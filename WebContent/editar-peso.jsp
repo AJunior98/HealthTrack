@@ -28,7 +28,7 @@
 
                 <!-- BOTÃO VOLTAR -->
                 <div class="botao-voltar">
-                    <a href="./peso.html">
+                    <a href="./peso.jsp">
                         <span class="material-icons">arrow_back_ios_new</span>
                     </a>
                 </div>
@@ -50,15 +50,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item ms-auto">
-                            <a class="nav-link" href="./dashboard.html">Início<span class="material-icons">space_dashboard</span></a>
+                            <a class="nav-link" href="./dashboard.jsp">Início<span class="material-icons">space_dashboard</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
-                            <a class="nav-link active" aria-current="page" href="./peso.html">Peso<span class="material-icons">monitor_weight</span></a>
+                            <a class="nav-link active" aria-current="page" href="./peso.jsp">Peso<span class="material-icons">monitor_weight</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
-                            <a class="nav-link" href="./exercicios.html">Exercícios<span class="material-icons">fitness_center</span></a>
+                            <a class="nav-link" href="./exercicios.jsp">Exercícios<span class="material-icons">fitness_center</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
@@ -118,7 +118,7 @@
                 
                 <!-- BOTÃO SALVAR -->
                 <div class="row container-botao-salvar">
-                    <a class="col-6" href="./peso.html">
+                    <a class="col-6" href="./peso.jsp">
                         <button type="button" class="botao-salvar">SALVAR</button>
                     </a>
                 </div>

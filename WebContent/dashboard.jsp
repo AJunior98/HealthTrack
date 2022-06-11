@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/dashboard.css">
 
-    <title>Dashboard // Health Track</title>
+    <title> Dashboard // Health Track</title>
 </head>
 
 <body>
@@ -42,15 +42,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item ms-auto">
-                            <a class="nav-link active" aria-current="page" href="./dashboard.html">Início<span class="material-icons">space_dashboard</span></a>
+                            <a class="nav-link active" aria-current="page" href="./dashboard.jsp">Início<span class="material-icons">space_dashboard</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
-                            <a class="nav-link" href="./peso.html">Peso<span class="material-icons">monitor_weight</span></a>
+                            <a class="nav-link" href="./peso.jsp">Peso<span class="material-icons">monitor_weight</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
-                            <a class="nav-link" href="./exercicios.html">Exercícios<span class="material-icons">fitness_center</span></a>
+                            <a class="nav-link" href="./exercicios.jsp">Exercícios<span class="material-icons">fitness_center</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">

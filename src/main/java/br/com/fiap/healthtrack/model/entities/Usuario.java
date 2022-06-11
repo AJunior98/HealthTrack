@@ -8,15 +8,17 @@ public class Usuario implements Serializable{
 
 	private Integer id;
 	private String nome;
-	private Integer senha;
+	private String senha;
+	private String email;
 	
 	public Usuario() {
 	}
 
-	public Usuario(Integer id, String nome, Integer senha) {
+	public Usuario(Integer id, String nome, String senha, String email) {
 		this.id = id;
 		this.nome = nome;
 		this.senha = senha;
+		this.email = email;
 	}
 
 	public Integer getId() {
@@ -35,12 +37,20 @@ public class Usuario implements Serializable{
 		this.nome = nome;
 	}
 
-	public Integer getSenha() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public void setSenha(Integer senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override

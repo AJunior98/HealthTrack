@@ -16,9 +16,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/adicionar-peso.css">
+    <link rel="stylesheet" href="./css/adicionar-exercicio.css">
 
-    <title>Adicionar Peso // Health Track</title>
+    <title>Adicionar Exercício // Health Track</title>
 </head>
 
 <body>
@@ -28,14 +28,14 @@
 
                 <!-- BOTÃO VOLTAR -->
                 <div class="botao-voltar">
-                    <a href="./peso.html">
+                    <a href="./exercicios.jsp">
                         <span class="material-icons">arrow_back_ios_new</span>
                     </a>
                 </div>
                 <!-- BOTÃO VOLTAR -->
 
                 <!-- TÍTULO DA PÁGINA -->
-                <h1 class="titulo-navbar">Adicionar peso</h1>
+                <h1 class="titulo-navbar">Adicionar exercício</h1>
                 <!-- TÍTULO DA PÁGINA -->
 
                 <!-- INÍCIO MENU SANDUÍCHE -->
@@ -50,15 +50,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item ms-auto">
-                            <a class="nav-link" href="./dashboard.html">Início<span class="material-icons">space_dashboard</span></a>
+                            <a class="nav-link" href="./dashboard.jsp">Início<span class="material-icons">space_dashboard</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
-                            <a class="nav-link active" aria-current="page" href="./peso.html">Peso<span class="material-icons">monitor_weight</span></a>
+                            <a class="nav-link" href="./peso.jsp">Peso<span class="material-icons">monitor_weight</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
-                            <a class="nav-link" href="./exercicios.html">Exercícios<span class="material-icons">fitness_center</span></a>
+                            <a class="nav-link active" aria-current="page" href="./exercicios.jsp">Exercícios<span class="material-icons">fitness_center</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
@@ -90,14 +90,14 @@
         <div class="container container-inputs col-lg-6">
             <!-- FORMULÁRIO PARA EDIÇÃO DE INFORMAÇÕES -->
             <form>
-                <!-- CAMPO PESO -->
+                <!-- CAMPO MODALIDADE -->
                 <div class="row mx-auto">
-                    <label class="material-icons col-2" for="data">monitor_weight</label>
+                    <label class="material-icons col-2" for="data">fitness_center</label>
                     <div class="container-descricao col-10">
-                        <input value="" type="" placeholder="Peso">
+                        <input value="" type="" placeholder="Modalidade">
                     </div>
                 </div>
-                <!-- CAMPO PESO -->
+                <!-- CAMPO MODALIDADE -->
                 
                 <!-- CAMPO DATA -->
                 <div class="row mx-auto">
@@ -107,6 +107,42 @@
                     </div>
                 </div>
                 <!-- CAMPO DATA -->
+                
+                <!-- CAMPO DURAÇÃO -->
+                <div class="row mx-auto">
+                    <label class="material-icons col-2" for="data">timer</label>
+                    <div class="container-descricao col-10">
+                        <input value="" type="" placeholder="Duração">
+                    </div>
+                </div>
+                <!-- CAMPO DURAÇÃO -->
+                
+                <!-- CAMPO DISTÂNCIA -->
+                <div class="row mx-auto">
+                    <label class="material-icons col-2" for="data">route</label>
+                    <div class="container-descricao col-10">
+                        <input value="" type="" placeholder="Distância">
+                    </div>
+                </div>
+                <!-- CAMPO DISTÂNCIA -->
+                
+                <!-- CAMPO CALORIAS -->
+                <div class="row mx-auto">
+                    <label class="material-icons col-2" for="data">local_fire_department</label>
+                    <div class="container-descricao col-10">
+                        <input value="" type="" placeholder="Calorias">
+                    </div>
+                </div>
+                <!-- CAMPO CALORIAS -->
+                
+                <!-- CAMPO INTENSIDADE -->
+                <div class="row mx-auto">
+                    <label class="material-icons col-2" for="data">speed</label>
+                    <div class="container-descricao col-10">
+                        <input value="" type="" placeholder="Intensidade">
+                    </div>
+                </div>
+                <!-- CAMPO INTENSIDADE -->
                 
                 <!-- CAMPO OBSERVAÇÕES -->
                 <div class="row mx-auto">
@@ -119,7 +155,7 @@
                 
                 <!-- BOTÃO SALVAR -->
                 <div class="row container-botao-salvar">
-                    <a class="col-6" href="./peso.html">
+                    <a class="col-6" href="./exercicios.jsp">
                         <button type="button" class="botao-salvar">SALVAR</button>
                     </a>
                 </div>

@@ -28,7 +28,7 @@
 
                 <!-- BOTÃO VOLTAR -->
                 <div class="botao-voltar">
-                    <a href="./exercicios.html">
+                    <a href="./exercicios.jsp">
                         <span class="material-icons">arrow_back_ios_new</span>
                     </a>
                 </div>
@@ -50,15 +50,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item ms-auto">
-                            <a class="nav-link" href="./dashboard.html">Início<span class="material-icons">space_dashboard</span></a>
+                            <a class="nav-link" href="./dashboard.jsp">Início<span class="material-icons">space_dashboard</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
-                            <a class="nav-link" href="./peso.html">Peso<span class="material-icons">monitor_weight</span></a>
+                            <a class="nav-link" href="./peso.jsp">Peso<span class="material-icons">monitor_weight</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
-                            <a class="nav-link active" aria-current="page" href="./exercicios.html">Exercícios<span class="material-icons">fitness_center</span></a>
+                            <a class="nav-link active" aria-current="page" href="./exercicios.jsp">Exercícios<span class="material-icons">fitness_center</span></a>
                         </li>
 
                         <li class="nav-item ms-auto">
@@ -82,7 +82,7 @@
     <main>
         <!-- BOTÃO EXCLUIR REGISTRO -->
         <div class="container-excluir col-lg-6 mx-auto">
-            <button type="button" class="botao-excluir">excluir registro</button>
+            <button  type="button" class="botao-excluir">excluir registro</button>
         </div>
         <!-- BOTÃO EXCLUIR REGISTRO -->
         
@@ -116,15 +116,6 @@
                 </div>
                 <!-- CAMPO DURAÇÃO -->
                 
-                <!-- CAMPO DISTÂNCIA -->
-                <div class="row mx-auto">
-                    <label class="material-icons col-2" for="data">route</label>
-                    <div class="container-descricao col-10">
-                        <input value="" type="" placeholder="Distância">
-                    </div>
-                </div>
-                <!-- CAMPO DISTÂNCIA -->
-                
                 <!-- CAMPO CALORIAS -->
                 <div class="row mx-auto">
                     <label class="material-icons col-2" for="data">local_fire_department</label>
@@ -133,15 +124,6 @@
                     </div>
                 </div>
                 <!-- CAMPO CALORIAS -->
-                
-                <!-- CAMPO INTENSIDADE -->
-                <div class="row mx-auto">
-                    <label class="material-icons col-2" for="data">speed</label>
-                    <div class="container-descricao col-10">
-                        <input value="" type="" placeholder="Intensidade">
-                    </div>
-                </div>
-                <!-- CAMPO INTENSIDADE -->
                 
                 <!-- CAMPO OBSERVAÇÕES -->
                 <div class="row mx-auto">
@@ -154,7 +136,7 @@
 
                 <!-- BOTÃO SALVAR -->
                 <div class="row container-botao-salvar">
-                    <a class="col-6" href="./exercicios.html">
+                    <a class="col-6" href="./exercicios.jsp">
                         <button type="button" class="botao-salvar">SALVAR</button>
                     </a>
                 </div>

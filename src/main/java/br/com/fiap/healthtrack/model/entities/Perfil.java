@@ -10,6 +10,7 @@ public class Perfil implements Serializable{
 	private Double meta;
 	private Double altura;
 	private Double peso;
+	private Integer idade;
 	
 	private Usuario usuario;
 	

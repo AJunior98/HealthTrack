@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.servlet.RequestDispatcher;
 
 import br.com.fiap.healthtrack.database.DB;
 import br.com.fiap.healthtrack.database.DbException;
@@ -16,7 +17,7 @@ import br.com.fiap.healthtrack.model.entities.Usuario;
 public class UsuarioDaoJDBC implements UsuarioDao {
 
 	private Connection conn;
-	
+
 	public UsuarioDaoJDBC(Connection conn) {
 		this.conn = conn;
 	}
@@ -26,13 +27,12 @@ public class UsuarioDaoJDBC implements UsuarioDao {
 		PreparedStatement st = null;
 		try {
 			st = conn.prepareStatement(
-					"INSERT INTO T_MNT_DOENCA " 
-					+ "(tp_doenca) "
-					+ "VALUES "
-					+ "(?)", 
-					Statement.RETURN_GENERATED_KEYS);
-			
+					"INSERT INTO tb_usuario(nm_usuario, nr_senha, nm_email) "
+					+ "VALUES (?, ?,?)");
+					 
 			st.setString(1, obj.getNome());
+			st.setString(2,obj.getSenha());
+			st.setString(3, obj.getEmail());
 			
 			int rowsAffected = st.executeUpdate();
 			
@@ -98,23 +98,25 @@ public class UsuarioDaoJDBC implements UsuarioDao {
 	}
 
 	@Override
-	public Usuario findById(Integer id) {
+	public Usuario findByEmailAndPwd(String email, String pwd) {
 		PreparedStatement st = null;
 		ResultSet rs = null;
+		RequestDispatcher dispatcher = null;
 		try {
 			st = conn.prepareStatement(
 					"SELECT * "
-					+ "FROM T_MNT_DOENCA "
-					+ "where id = ?");
+					+ "FROM tb_usuario "
+					+ "where nm_email = ? and nr_senha = ?");
 					
-			st.setInt(1, id);
+			st.setString(1, email);
+			st.setString(2, pwd);
 			
 			rs = st.executeQuery();
 			
 			if (rs.next()) {
-				Usuario dc = instantiateUsuario(rs);
-				return dc;
-			}
+				Usuario user = instantiateUsuario(rs);
+				return user;
+			} 
 			return null;
 		}
 		catch (SQLException e) {
@@ -127,10 +129,10 @@ public class UsuarioDaoJDBC implements UsuarioDao {
 	}
 
 	private Usuario instantiateUsuario(ResultSet rs) throws SQLException {
-		Usuario dc = new Usuario();
-		dc.setId(rs.getInt("id"));
-		dc.setNome(rs.getString("tp_doenca"));
-		return dc;
+		Usuario user = new Usuario();
+		user.setEmail(rs.getString("nm_email"));
+		user.setSenha(rs.getString("nr_senha"));
+		return user;
 	}
 
 	@Override
