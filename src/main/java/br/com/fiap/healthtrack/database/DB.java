@@ -1,13 +1,10 @@
 package br.com.fiap.healthtrack.database;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Properties;
 
 public class DB {
 
@@ -18,7 +15,6 @@ public class DB {
 			return conn;
 		} else {
 			try {
-				Properties props = new Properties();
 				String user = "developer";
 				String password = "ApO.1998";
 				Class.forName("com.mysql.jdbc.Driver");

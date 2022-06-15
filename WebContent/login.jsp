@@ -34,16 +34,10 @@
                 <!-- INÃCIO QUADRO COM FORMULÃRIO PARA LOGIN -->
                 <div class="container quadro-login col-lg-4 mb-4 py-5">
                     <h1 class="fs-4 fw-normal text-center mb-4">
-                        Cadastre-se
+                        Acesse sua conta
                     </h1>
                     
-                    <form method="get" action="register">
-                    	<!-- CAMPO E-MAIL -->
-                        <div class="container mb-4 col-10">
-                            <label for="email" class="mb-2">Nome:</label>
-                            <input name= "nome" class="form-control" id="email">
-                        </div>
-                        
+                    <form method="post" action="login">
                         <!-- CAMPO E-MAIL -->
                         <div class="container mb-4 col-10">
                             <label for="email" class="mb-2">E-mail:</label>
@@ -58,12 +52,17 @@
                             <input type="password" name="password" class="form-control" id="pwd">
                         </div>
                         
+                        <!-- CAMPO MANTENHA-ME CONECTADO -->
+                        <div class="container col-10 mb-4 text-center">
+                            <label><input type="checkbox">&nbsp;Mantenha-me conectado</label>
+                        </div>
+                        
                         <!-- BOTÃƒO ENTRAR -->
                         <div class="container col-10">
                             <div class="d-grid gap-2 col-12 mx-auto px-0">
                             <!-- AQUI VAMOS COLOCAR O VALIDADOR DE USUÃRIO -->
-                            	<input type='submit' name='Cadastrar' id='login'
-                            		class = 'form-login' value="Cadastrar" />
+                            	<input type='submit' name='Entrar' id='login'
+                            		class = 'form-login' value="Entrar" />
                             <!--<a href="HealthTrack/login" class="btn botao-entrar">Entrar</a>-->
                             </div>    
                         </div>
@@ -74,7 +73,7 @@
                 <!-- LINK PARA CADASTRAR-SE -->
                 <div class="container text-center cadastrar">
                     <p class="fs-5">
-                        Já sou um usuário<br><a href="login.jsp" class="fw-bold text-decoration-none">Clique aqui para fazer login!</a>
+                        Ainda não está cadastrado?<br><a href="index.jsp" class="fw-bold text-decoration-none">Cadastre-se clicando aqui!</a>
                     </p>
                 </div>
             </main>
@@ -85,7 +84,9 @@
                     Foto: Tembela Bohle via <a href="https://www.pexels.com/pt-br/foto/foto-de-homem-correndo-durante-o-dia-2803158/">Pexels</a>
                 </p>
             </footer>
+        
         </div>
+
     </div>
     <!-- CONTAINER PRINCIPAL -->
 

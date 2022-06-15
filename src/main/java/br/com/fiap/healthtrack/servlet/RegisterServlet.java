@@ -8,30 +8,29 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import br.com.fiap.healthtrack.model.dao.DaoFactory;
 import br.com.fiap.healthtrack.model.dao.UsuarioDao;
 import br.com.fiap.healthtrack.model.entities.Usuario;
 
-@WebServlet("/login")
-public class Login extends HttpServlet {
+@WebServlet("/register")
+public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	static UsuarioDao usuarioDao = DaoFactory.createUsuarioDao();
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
-		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nome = request.getParameter("nome");
 		String email = request.getParameter("email");
 		String  pwd = request.getParameter("password");
+		Usuario newUsuario = new Usuario(null, nome, pwd, email);
 		RequestDispatcher dispatcher = null;
 		
-		Usuario user = usuarioDao.findByEmailAndPwd(email, pwd);
-		
-		if(user != null) {
-			dispatcher = request.getRequestDispatcher("dashboard.jsp");
-		}else {
+		if(nome != null && email != null && pwd != null) {
+			usuarioDao.insert(newUsuario);
+			dispatcher = request.getRequestDispatcher("login.jsp");
+		} 
+		else {
 			dispatcher = request.getRequestDispatcher("index.jsp");
 		}
 		dispatcher.forward(request, response);

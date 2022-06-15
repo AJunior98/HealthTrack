@@ -4,10 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.servlet.RequestDispatcher;
+import java.sql.Statement;
 
 import br.com.fiap.healthtrack.database.DB;
 import br.com.fiap.healthtrack.database.DbException;
@@ -23,85 +20,9 @@ public class UsuarioDaoJDBC implements UsuarioDao {
 	}
 	
 	@Override
-	public void insert(Usuario obj) {
-		PreparedStatement st = null;
-		try {
-			st = conn.prepareStatement(
-					"INSERT INTO tb_usuario(nm_usuario, nr_senha, nm_email) "
-					+ "VALUES (?, ?,?)");
-					 
-			st.setString(1, obj.getNome());
-			st.setString(2,obj.getSenha());
-			st.setString(3, obj.getEmail());
-			
-			int rowsAffected = st.executeUpdate();
-			
-			if (rowsAffected > 0) {
-				ResultSet rs = st.getGeneratedKeys();
-				if(rs.next()) {
-					int id = rs.getInt(1);
-					obj.setId(id);
-				}
-				DB.closeResultSet(rs);
-			}
-			else {
-				throw new DbException("Unexpected error! No rows affected.");
-			}
-
-		}
-		catch (SQLException e) {
-			throw new DbException(e.getMessage());
-		} 
-		finally {
-			DB.closeStatement(st);
-		}		
-	}
-
-	@Override
-	public void update(Usuario obj) {
-		PreparedStatement st = null;
-		try {
-			st = conn.prepareStatement(
-					"UPDATE T_MNT_DOENCA " 
-					+ "SET tp_doenca = ? "
-					+ "WHERE id = ?");
-			
-			st.setString(1, obj.getNome());
-			st.setInt(2, obj.getId());
-			
-			st.executeUpdate();
-		}
-		catch (SQLException e) {
-			throw new DbException(e.getMessage());
-		} 
-		finally {
-			DB.closeStatement(st);
-		}		
-	}
-
-	@Override
-	public void deleteById(Integer id) {
-		PreparedStatement st = null;
-		try {
-			st = conn.prepareStatement("DELETE FROM T_MNT_DOENCA WHERE id = ?");
-			
-			st.setInt(1, id);
-			
-			st.executeUpdate();
-		}
-		catch (SQLException e) {
-			throw new DbException(e.getMessage());
-		}
-		finally {
-			DB.closeStatement(st);
-		}		
-	}
-
-	@Override
 	public Usuario findByEmailAndPwd(String email, String pwd) {
 		PreparedStatement st = null;
 		ResultSet rs = null;
-		RequestDispatcher dispatcher = null;
 		try {
 			st = conn.prepareStatement(
 					"SELECT * "
@@ -127,40 +48,51 @@ public class UsuarioDaoJDBC implements UsuarioDao {
 			DB.closeResultSet(rs);
 		} 
 	}
+	
+	@Override
+	public void insert(Usuario user) {
+		PreparedStatement st = null;
+		try {
+			st = conn.prepareStatement(
+					"INSERT INTO tb_usuario " 
+					+ "(nm_usuario, nm_email, nr_senha) "
+					+ "VALUES "
+					+ "(?, ?, ?)", 
+					Statement.RETURN_GENERATED_KEYS);
+			
+			st.setString(1, user.getNome());
+			st.setString(2, user.getEmail());
+			st.setString(3, user.getSenha());
+										
+			int rowsAffected = st.executeUpdate();
+			
+			if (rowsAffected > 0) {
+				ResultSet rs = st.getGeneratedKeys();
+				if(rs.next()) {
+					int id = rs.getInt(1);
+					user.setId(id);
+				}
+				DB.closeResultSet(rs);
+			}
+			else {
+				throw new DbException("Unexpected error! No rows affected.");
+			}
 
+		}
+		catch (SQLException e) {
+			throw new DbException(e.getMessage());
+		} 
+		finally {
+			DB.closeStatement(st);
+		}		
+	}
+	
 	private Usuario instantiateUsuario(ResultSet rs) throws SQLException {
 		Usuario user = new Usuario();
+		user.setNome(rs.getString("nm_usuario"));
 		user.setEmail(rs.getString("nm_email"));
 		user.setSenha(rs.getString("nr_senha"));
 		return user;
 	}
-
-	@Override
-	public List<Usuario> findAll() {
-		PreparedStatement st = null;
-		ResultSet rs = null;
-		try {
-			st = conn.prepareStatement(
-					"SELECT * "
-					+ "FROM T_MNT_DOENCA");
-					
-			rs = st.executeQuery();
-			
-			List<Usuario> list = new ArrayList<>();
-			
-			while (rs.next()) {
-				Usuario obj = instantiateUsuario(rs);
-				list.add(obj);
-			}
-			return list;
-		}
-		catch (SQLException e) {
-			throw new DbException(e.getMessage());
-		}
-		finally {
-			DB.closeStatement(st);
-			DB.closeResultSet(rs);
-		}
-	}
-	
 }
+

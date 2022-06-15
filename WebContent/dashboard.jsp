@@ -2,165 +2,130 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <!-- Google Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/dashboard.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+	rel="stylesheet">
+<!-- Google Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/dashboard.css">
 
-    <title> Dashboard // Health Track</title>
+<title>Dashboard // Health Track</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-light navbar-custom fixed-top">
-            <div class="container-fluid col-lg-6">
+	<header>
+		<div class="container-fluid col-lg-6">
+			<!-- TÍTULO DA PÁGINA -->
+			<h1 class="titulo-navbar">Dashboard</h1>
+			<!-- TÍTULO DA PÁGINA -->
+		</div>
+	</header>
 
-                <!-- TÍTULO DA PÁGINA -->
-                <h1 class="titulo-navbar">Dashboard</h1>
-                <!-- TÍTULO DA PÁGINA -->
+	<main>
+		<div class="container col-xl-6 mx-auto">
 
-                <!-- INÍCIO MENU SANDUÍCHE -->
-                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- FIM MENU SANDUÍCHE -->
+			<!-- CARDS -->
+			<div class="container-cards">
+				<div class="row mx-auto">
 
-                <!-- INÍCIO DA LISTA DO MENU -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item ms-auto">
-                            <a class="nav-link active" aria-current="page" href="./dashboard.jsp">Início<span class="material-icons">space_dashboard</span></a>
-                        </li>
+					<!-- INÍCIO CARD 1 -->
+					<div class="card col-xl-5">
+						<div class="card-header">Meta semanal</div>
+						<div class="card-body">
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width: 35%;"
+									aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
+							</div>
+							<p class="card-text">Voc� j� atingiu 35% da sua meta
+								semanal de exercicios.</p>
+						</div>
+					</div>
+					<!-- FIM CARD 1 -->
 
-                        <li class="nav-item ms-auto">
-                            <a class="nav-link" href="./peso.jsp">Peso<span class="material-icons">monitor_weight</span></a>
-                        </li>
+					<!-- INÍCIO CARD 2 -->
+					<div class="card col-xl-5">
+						<div class="card-header">Modalidade da semana</div>
+						<div class="card-body">
+							<div class="card-title">
+								<span class="material-icons">timer</span>
+								<h2>00:59:40</h2>
+							</div>
+							<p class="card-text">At� agora a modalidade mais praticada
+								da semana foi corrida.</p>
+						</div>
+					</div>
+					<!-- FIM CARD 2 -->
 
-                        <li class="nav-item ms-auto">
-                            <a class="nav-link" href="./exercicios.jsp">Exercícios<span class="material-icons">fitness_center</span></a>
-                        </li>
+					<!-- INÍCIO CARD 3 -->
+					<div class="card col-xl-5">
+						<div class="card-header">Meta de peso</div>
+						<div class="card-body">
+							<div class="card-title">
+								<span class="material-icons">monitor_weight</span>
+								<h2>2,8kg</h2>
+							</div>
+							<p class="card-text">Voc� est� a 2,8kg de atingir sua meta
+								de peso.</p>
+						</div>
+					</div>
+					<!-- FIM CARD 3 -->
 
-                        <li class="nav-item ms-auto">
-                                <a class="nav-link" href="#">Alimentação<span class="material-icons">restaurant</span></a>
-                        </li>
+					<!-- INÍCIO CARD 4 -->
+					<div class="card col-xl-5">
+						<div class="card-header">Ingest�o calorica</div>
+						<div class="card-body">
+							<div class="progress">
+								<div class="progress-bar" role="progressbar" style="width: 47%;"
+									aria-valuenow="47" aria-valuemin="0" aria-valuemax="100">47%</div>
+							</div>
+							<p class="card-text">Voc� ingeriu 47% do valor energetico
+								semanal. A previs�o � que voc� ultrapasse o planejado!</p>
+						</div>
+					</div>
+					<!-- FIM CARD 4 -->
 
-                        <li class="nav-item ms-auto">
-                            <a class="nav-link" href="#">Configurações<span class="material-icons">settings</span></a>
-                        </li>
+				</div>
+			</div>
 
-                        <li class="nav-item ms-auto">
-                            <a class="nav-link" href="#">Meu Perfil<span class="material-icons">account_circle</span></a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- FIM DA LISTA DO MENU -->
-            </div>
-        </nav>
-    </header>
+			<!-- CONTAINER HISTÓRICO DE PESO -->
+			<div class="container-grafico">
+				<h3>Historico de peso</h3>
+				<div class="container">
+					<img src="./imagens/graf.png" alt="Gráfico">
+				</div>
+			</div>
+			<!-- CONTAINER HISTÓRICO DE PESO -->
 
-    <main>
-        <div class="container col-xl-6 mx-auto">
-           
-            <!-- CARDS -->
-            <div class="container-cards">
-                <div class="row mx-auto">
+			<!-- CONTAINER DICA DO DIA -->
+			<div class="container-dica">
+				<h3>Dica do dia</h3>
+				<p>A pratica de atividades fisicas de forma regular aumenta os
+					niveis de serotonina e tem vinculo direto na melhora do humor.</p>
+			</div>
+			<!-- CONTAINER DICA DO DIA -->
 
-                    <!-- INÍCIO CARD 1 -->
-                    <div class="card col-xl-5">
-                        <div class="card-header">
-                            Meta semanal
-                        </div>
-                        <div class="card-body">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
-                            </div>
-                            <p class="card-text">Você já atingiu 35% da sua meta semanal de exercícios. Ainda faltam 4 dias para o fim da semana!</p>
-                        </div>
-                    </div>
-                    <!-- FIM CARD 1 -->
-                    
-                    <!-- INÍCIO CARD 2 -->
-                    <div class="card col-xl-5">
-                        <div class="card-header">
-                            Modalidade da semana
-                        </div>
-                        <div class="card-body">
-                            <div class="card-title">
-                                <span class="material-icons">timer</span>
-                                <h2>00:59:40</h2>
-                            </div>
-                            <p class="card-text">Até agora a modalidade mais praticada da semana é corrida.</p>
-                        </div>
-                    </div>
-                    <!-- FIM CARD 2 -->
-                    
-                    <!-- INÍCIO CARD 3 -->
-                    <div class="card col-xl-5">
-                        <div class="card-header">
-                            Meta de peso
-                        </div>
-                        <div class="card-body">
-                            <div class="card-title">
-                                <span class="material-icons">monitor_weight</span>
-                                <h2>2,8kg</h2>
-                            </div>
-                            <p class="card-text">Você está a 2,8kg de atingir sua meta de peso.</p>
-                        </div>
-                    </div>
-                    <!-- FIM CARD 3 -->
-                    
-                    <!-- INÍCIO CARD 4 -->
-                    <div class="card col-xl-5">
-                        <div class="card-header">
-                            Ingestão calórica
-                        </div>
-                        <div class="card-body">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 47%;" aria-valuenow="47" aria-valuemin="0" aria-valuemax="100">47%</div>
-                            </div>
-                            <p class="card-text">Você ingeriu 47% do valor energético semanal. A previsão é que você ultrapasse o planejado!</p>
-                        </div>
-                    </div>
-                    <!-- FIM CARD 4 -->
-                    
-                </div>
-            </div>
+		</div>
+	</main>
 
-            <!-- CONTAINER HISTÓRICO DE PESO -->
-            <div class="container-grafico">
-                <h3>Histórico de peso</h3>
-                <div class="container">
-                    <img src="./imagens/graf.png" alt="Gráfico">
-                </div>
-            </div>
-            <!-- CONTAINER HISTÓRICO DE PESO -->
-            
-            <!-- CONTAINER DICA DO DIA -->
-            <div class="container-dica">
-                <h3>Dica do dia</h3>
-                <p>A prática de atividades físicas de forma regular aumenta os níveis de serotonina e tem ação direta na melhora do humor.</p>
-            </div>
-            <!-- CONTAINER DICA DO DIA -->
-            
-        </div>
-    </main>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous">
+		
+	</script>
 
 </body>
 
